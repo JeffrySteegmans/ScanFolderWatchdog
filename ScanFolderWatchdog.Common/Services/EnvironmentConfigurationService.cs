@@ -2,7 +2,7 @@
 
 namespace ScanFolderWatchdog.Common.Services
 {
-    public class EnvironmentConfigurationService : IConfigurationService
+    internal class EnvironmentConfigurationService : IConfigurationService
     {
         public string GetSetting(string key)
         {

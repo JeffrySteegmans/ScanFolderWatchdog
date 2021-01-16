@@ -1,6 +1,6 @@
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using ScanFolderWatchdog.Common.Services;
+using ScanFolderWatchdog.Common;
 
 namespace ScanFolderWatchdog.Worker
 {
@@ -15,8 +15,10 @@ namespace ScanFolderWatchdog.Worker
             Host.CreateDefaultBuilder(args)
                 .ConfigureServices((hostContext, services) =>
                 {
-                    services.AddHostedService<Worker>();
-                    services.AddSingleton<IConfigurationService, EnvironmentConfigurationService>();
+                    services
+                        .AddHostedService<Worker>()
+                        .UseEnvironmentConfigurationService()
+                        .UseMailNotificationService();
                 });
     }
 }

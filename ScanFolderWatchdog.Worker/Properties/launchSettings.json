@@ -3,11 +3,18 @@
     "ScanFolderWatchdog.Worker": {
       "commandName": "Project",
       "environmentVariables": {
+        "EMAIL_MESSAGE": "In bijlage vindt u de nieuwe scan",
         "FOLDER_TO_WATCH": "C:\\ScanFolderWatchdog",
         "DELAY_IN_SECONDS": "10",
-        "DOTNET_ENVIRONMENT": "Development"
+        "DOTNET_ENVIRONMENT": "Development",
+        "EMAIL_TO_NAME": "Jeffry Steegmans",
+        "EMAIL_SUBJECT": "Nieuwe scan",
+        "EMAIL_TO_ADDRESS": "jeffrysteegmans@gmail.com"
       },
       "dotnetRunMessages": "true"
+    },
+    "Docker": {
+      "commandName": "Docker"
     }
   }
 }
