@@ -60,6 +60,7 @@ namespace ScanFolderWatchdog.Worker
                     _configurationService.GetSetting("EMAIL_MESSAGE"),
                     file
                 );
+                _logger.LogInformation("\tMail Sent ({email})", _configurationService.GetSetting("EMAIL_TO_ADDRESS"));
 
                 string fileName = Path.GetFileName(file);
                 Console.WriteLine($"\tMove File ({file}) to processed folder: {Path.Combine(destinationFolder, fileName)}");
