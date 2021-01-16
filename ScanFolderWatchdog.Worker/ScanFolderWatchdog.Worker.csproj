@@ -4,6 +4,8 @@
     <TargetFramework>net5.0</TargetFramework>
     <UserSecretsId>dotnet-ScanFolderWatchdog.Worker-5035407D-C15D-4A5B-9B3A-89A19863DE14</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+	<DockerfileRunEnvironmentFiles>settings.env</DockerfileRunEnvironmentFiles>
+	  <DockerfileRunArguments>-v "C:\ScanFolderWatchdog:/scans"</DockerfileRunArguments>
   </PropertyGroup>
 
   <ItemGroup>

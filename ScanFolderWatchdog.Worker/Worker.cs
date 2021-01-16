@@ -23,7 +23,7 @@ namespace ScanFolderWatchdog.Worker
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
-            string folderToWatch = _configurationService.GetSetting("FOLDER_TO_WATCH");
+            string folderToWatch = "/scans";
             string destinationFolder = Path.Combine(folderToWatch, "processed");
             int delay = _configurationService.GetSettingOrDefault("DELAY_IN_SECONDS", 1);
             EnsureFolderExist(destinationFolder);
@@ -47,7 +47,9 @@ namespace ScanFolderWatchdog.Worker
 
         private void ProcessFolder(string folderToWatch, string destinationFolder)
         {
-            foreach (string file in System.IO.Directory.GetFiles(folderToWatch))
+            var files = Directory.GetFiles(folderToWatch);
+            Console.WriteLine($"\t{files.Length} files found");
+            foreach (string file in files)
             {
                 Console.WriteLine($"\tMail File: {file}");
 

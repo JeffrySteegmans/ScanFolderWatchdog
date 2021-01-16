@@ -14,7 +14,10 @@ namespace ScanFolderWatchdog.Common
 
         public static IServiceCollection UseMailNotificationService(this IServiceCollection services)
         {
-            services.AddSingleton<INotificationService, MailNotificationService>();
+            services
+                .AddSingleton<INotificationService, MailNotificationService>()
+                // TODO: Replace with factory
+                .AddSingleton<INotificationSettings, MailNotificationSettings>();
 
             return services;
         }

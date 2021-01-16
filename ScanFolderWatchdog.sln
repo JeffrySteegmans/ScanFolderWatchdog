@@ -7,7 +7,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ScanFolderWatchdog.Worker",
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{99976AC3-D315-4000-8DD4-9D8F4B3E95D3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScanFolderWatchdog.Common", "ScanFolderWatchdog.Common\ScanFolderWatchdog.Common.csproj", "{8F43AA76-0AC8-452C-9798-D69E729A04C3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ScanFolderWatchdog.Common", "ScanFolderWatchdog.Common\ScanFolderWatchdog.Common.csproj", "{8F43AA76-0AC8-452C-9798-D69E729A04C3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docker", "Docker", "{5A3192E0-6150-4174-968A-9EF436EB5E94}"
+	ProjectSection(SolutionItems) = preProject
+		Dockerfile = Dockerfile
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
